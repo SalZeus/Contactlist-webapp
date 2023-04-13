@@ -20,16 +20,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// actualizar el nuevo array
 				setStore({contacts:newContacts})
 			},
-			changeColor: (index, color) => {
+			delContact:(index)=>{
+				let newContacts =[...store.contacts,contact]
+				newContacts.splice(index,1)
+				setStore({cotnacts:newContacts})
+			},
+			// changeColor: (index, color) => {
 
-				const store = getStore();
+			// 	const store = getStore();
 
-				const demo = store.demo.map((elm, i) => {
-					if(i === index) elm.background = color;
-					return elm;
-				});
-				setStore({demo:demo})
-			}
+			// 	const demo = store.demo.map((elm, i) => {
+			// 		if(i === index) elm.background = color;
+			// 		return elm;
+			// 	});
+			// 	setStore({demo:demo})
+			// }
 		}
 	}
 }

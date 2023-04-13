@@ -10,18 +10,17 @@ export const Home = () => {
 
 	return(
 		<div className="d-flex flex-column justify-center mt-5">
-			<h1>Contact List</h1>
 			<div className="list-group contact-list">
-			{contacts.map((contact,index) => {
-					<ContactCard
-						name={contact.name}
-						address={contact.address} 
-						email={contact.email} 
-						phone={contact.phone}
-						img={rigoImage}
-						key={index}
-					 />
-			})}
-			</div>
+      {contacts.map((contacts, index) => (
+        <ContactCard
+          name={contacts.name}
+          address={contacts.address}
+          email={contacts.email}
+          telephone={contacts.telephone}
+          img={rigoImage}
+          key={index}
+        />
+      ))}
+    </div>
 		</div>
 		)};

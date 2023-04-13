@@ -89,7 +89,9 @@ export const Modal = props => {
 Modal.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
-	show: PropTypes.bool
+	show: PropTypes.bool,
+	key: PropTypes.func,
+	onDelete: PropTypes.func
 };
 
 /**

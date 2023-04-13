@@ -11,7 +11,7 @@ export const Demo = () => {
 	return (
 		<div className="container">
 			<ul className="list-group">
-				{store.demo.map((item, index) => {
+				{store.contacts.map((item, index) => {
 					return (
 						<li
 							key={index}
@@ -27,9 +27,7 @@ export const Demo = () => {
 									Check store/flux.js scroll to the actions to see the code
 								</p>
 							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
+							
 						</li>
 					);
 				})}

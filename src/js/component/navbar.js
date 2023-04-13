@@ -5,23 +5,15 @@ import rigoImage from "/workspace/Contactlist-webapp/src/img/rigo-baby.jpg"
 
 
 export const Navbar = () => {
-	const {store, actions}=useContext(Context)
+	const {actions}=useContext(Context)
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Fawncy contact list</span>
+				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className ="btn btn-primary" onClick={()=>actions.addContact({ 
-						name: "Juan", 
-						address: "colombia", 
-						email: "juanfeguto2@gmail.com", 
-						phone: "+573013182183", 
-						img:rigoImage
-						})}>Add New Contact
-						</button>
-				</Link>
+					<button onClick={()=>actions.addContact({ name: "Juan", address: "colombia", email: "juanfeguto2@gmail.com", phone: "+573013182183", img: { rigoImage } }
+					)} className="btn btn-primary">Add New Contact</button>
 			</div>
 		</nav>
 	);

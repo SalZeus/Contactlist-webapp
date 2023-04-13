@@ -18,7 +18,7 @@ export const ContactCard = props => {
                     </div>
                     <div className="card-body d-flex justify-content-between">
                         <div className="d-grid">
-                            <h5 className="card-title">{props.fullName}</h5>
+                            <h5 className="card-title">{props.name}</h5>
                             <i className="fa-solid fa-phone card-text text-secondary">{props.address}</i>
                             <i className="fa-solid fa-phone card-text text-secondary">{props.phone}</i>
                             <i className="fa-solid fa-phone card-text text-secondary">{props.email}</i>
@@ -53,10 +53,11 @@ ContactCard.propTypes = {
 	history: PropTypes.object,
 	onDelete: PropTypes.func,
 	name: PropTypes.string,
-	phone: PropTypes.string,
-	address: PropTypes.string,
 	email: PropTypes.string,
-	img: PropTypes.string
+	phone: PropTypes.string,
+	img: PropTypes.string,
+	address: PropTypes.string,
+	key: PropTypes.string,
 };
 
 /**
